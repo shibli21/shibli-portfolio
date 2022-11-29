@@ -12,7 +12,7 @@ export const DarkModeSwitch = () => {
 
   const isDark = () => theme === "dark";
 
-  if (!mounted) return null;
+  if (!mounted) return <div className="w-11"></div>;
 
   return (
     <Switch
