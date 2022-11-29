@@ -16,7 +16,7 @@ const SideNav: FC<SideNavProps> = ({ isOpen, setOpenNav, children }) => {
         leave="ease-in duration-200"
         leaveFrom="translate-x-0"
         leaveTo="-translate-x-full"
-        className="fixed inset-y-0 left-0 z-50 w-64 overflow-y-auto bg-white shadow-lg"
+        className="fixed inset-y-0 left-0 z-50 w-64 overflow-y-auto bg-white dark:bg-zinc-900 shadow-lg"
       >
         {children}
       </Transition.Child>

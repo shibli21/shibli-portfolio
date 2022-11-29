@@ -4,9 +4,9 @@ type Props = {};
 
 const Logo = (props: Props) => {
   return (
-    <h1 className="text-2xl font-bold font-secondary">
+    <h1 className="text-2xl font-bold flex font-secondary gap-2 items-end">
       Shibli
-      <span className="font-bold text-6xl leading-6 text-orange-500"> .</span>
+      <div className="w-3.5 h-3.5 bg-orange-500 rounded-full mb-1.5"></div>
     </h1>
   );
 };

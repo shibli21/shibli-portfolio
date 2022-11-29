@@ -1,4 +1,4 @@
-import { Poppins, Roboto_Mono, Secular_One } from "@next/font/google";
+import { Roboto_Mono, Secular_One } from "@next/font/google";
 
 const primary = Roboto_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700"],

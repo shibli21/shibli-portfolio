@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  @apply text-gray-800 bg-white font-primary;
+@layer base {
+  body {
+    @apply text-gray-800 bg-white font-primary;
+    @apply dark:text-white dark:bg-zinc-900;
+  }
 }
