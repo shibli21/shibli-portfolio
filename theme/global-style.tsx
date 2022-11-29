@@ -1,7 +1,12 @@
-import { Poppins } from "@next/font/google";
+import { Poppins, Roboto_Mono, Secular_One } from "@next/font/google";
 
-const customFont = Poppins({
-  weight: ["400", "700"],
+const primary = Roboto_Mono({
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
+
+const secondary = Secular_One({
+  weight: ["400"],
   subsets: ["latin"],
 });
 
@@ -10,10 +15,8 @@ export const GlobalStyle = () => {
     <style jsx global>
       {`
         :root {
-          --custom-font: ${customFont.style.fontFamily};
-        }
-        html {
-          font-family: var(--custom-font);
+          --primary-font: ${primary.style.fontFamily};
+          --secondary-font: ${secondary.style.fontFamily};
         }
       `}
     </style>
