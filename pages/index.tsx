@@ -1,4 +1,5 @@
 import Head from "next/head";
+import About from "../components/About";
 import MyExpertise from "../components/MyExpertise";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col gap-10 md:gap-20 ">
+        <About />
         <MyExpertise />
       </div>
     </div>
