@@ -4,7 +4,7 @@ import { SocialContacts } from "./SocialContact";
 
 export const Footer = () => {
   return (
-    <div className="border-t border-gray-500">
+    <div className="mt-10  md:mt-20 border-t border-gray-500">
       <div className="flex items-center  flex-col  space-y-4 max-w-6xl mx-auto py-4">
         <h1>Syed Shibli Mahmud</h1>
         <div className="space-x-6 flex flex-wrap items-center justify-center">

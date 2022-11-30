@@ -6,7 +6,7 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div className="container max-w-6xl mx-auto min-h-screen flex flex-col">
       <NavBar />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 px-4">{children}</main>
       <Footer />
     </div>
   );

@@ -16,7 +16,7 @@ export const NavBar = () => {
 
   return (
     <>
-      <nav className="flex p-4 items-center md:items-baseline  justify-between text-lg lowercase">
+      <nav className="flex p-4 items-center justify-between text-lg lowercase">
         <Logo />
 
         <ul className="gap-6 lg:gap-10 hidden md:flex">
