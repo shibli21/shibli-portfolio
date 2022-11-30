@@ -1,5 +1,6 @@
 import React, { FC, PropsWithChildren } from "react";
 import Heading from "./Heading";
+import Tag from "./Tag";
 
 type ResumeItemProps = {
   children: React.ReactNode;
@@ -16,14 +17,6 @@ const ResumeTitle: FC<PropsWithChildren> = ({ children }) => {
   return <h1 className="text-xl md:text-2xl font-secondary">{children}</h1>;
 };
 
-const ResumeTag: FC<PropsWithChildren> = ({ children }) => {
-  return (
-    <div className="text-xs p-0.5 leading-none text-zinc-900 dark:bg-orange-300 bg-orange-100 inline-block">
-      {children}
-    </div>
-  );
-};
-
 function Resume() {
   return (
     <section>
@@ -36,21 +29,21 @@ function Resume() {
               <h1>
                 <em>B.Sc in Computer Science & Engineering</em>
               </h1>
-              <ResumeTag>Jan 2018 - Dec 2022</ResumeTag>
+              <Tag>Jan 2018 - Dec 2022</Tag>
             </ResumeItem>
             <ResumeItem>
               <ResumeTitle>Cumilla Victoria govt. College</ResumeTitle>
               <h1>
                 <em>Higher Secondary Certificate</em>
               </h1>
-              <ResumeTag>June 2015 - June 2017</ResumeTag>
+              <Tag>June 2015 - June 2017</Tag>
             </ResumeItem>
             <ResumeItem>
               <ResumeTitle>Cumilla Zilla School</ResumeTitle>
               <h1>
                 <em>Secondary School Certificate</em>
               </h1>
-              <ResumeTag>Jan 2010 - Feb 2015</ResumeTag>
+              <Tag>Jan 2010 - Feb 2015</Tag>
             </ResumeItem>
           </div>
           <div>
