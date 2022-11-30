@@ -6,7 +6,7 @@ type ResumeItemProps = {
 };
 const ResumeItem = ({ children }: ResumeItemProps) => {
   return (
-    <div className="pl-4 relative last:pb-0 before:absolute before:w-4 before:h-4 before:bg-orange-00 dark:before:bg-orange-600  before:z-10 before:top-[8px] before:left-[-9px] before:rounded-full after:h-[100%] after:w-[2px] after:bg-orange-00 dark:after:bg-orange-600 after:absolute after:top-[8px] after:left-[-2px] after:z-0 pb-6">
+    <div className="pl-4 relative last:pb-0 before:absolute before:w-4 before:h-4 before:bg-orange-400 dark:before:bg-orange-600  before:z-10 before:top-[8px] before:left-[-9px] before:rounded-full after:h-[100%] after:w-[2px] after:bg-orange-400 dark:after:bg-orange-600 after:absolute after:top-[8px] after:left-[-2px] after:z-0 pb-6">
       {children}
     </div>
   );
