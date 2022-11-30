@@ -19,7 +19,7 @@ export const NavBar = () => {
       <nav className="flex sticky top-0 backdrop-blur-xl z-50 p-4 items-center justify-between text-lg lowercase">
         <Logo />
 
-        <ul className="gap-6 lg:gap-10 hidden md:flex">
+        <div className="gap-6 lg:gap-10 hidden md:flex">
           {NAV_LINKS.map((link) => (
             <Link
               className="text-lg font-medium transition duration-100 hover:text-orange-500"
@@ -31,7 +31,7 @@ export const NavBar = () => {
               {link.name}
             </Link>
           ))}
-        </ul>
+        </div>
 
         <div className="hidden md:block">
           <DarkModeSwitch />
