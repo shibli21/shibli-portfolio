@@ -48,7 +48,7 @@ const getProject = () => {
 
 const ProjectCard = ({ project }: { project: ProjectsType }) => {
   return (
-    <div className="dark:bg-zinc-800 bg-zinc-100  border">
+    <div className="dark:bg-zinc-800   border shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px]">
       <div className="overflow-hidden">
         <Image
           src={project.image}

@@ -8,3 +8,12 @@
     @apply dark:text-white dark:bg-zinc-900;
   }
 }
+
+html::-webkit-scrollbar {
+  width: 8px;
+  height: 0;
+}
+
+html::-webkit-scrollbar-thumb {
+  @apply shadow-orange-600 bg-orange-600 dark:bg-orange-600;
+}
