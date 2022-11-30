@@ -10,7 +10,7 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
   const meta = {
     title: "Syed Shibli Mahmud – SOFTWARE ENGINEER, FULL STACK & APP DEVELOPER",
     description: `Full-stack developer, JavaScript & Flutter enthusiast`,
-    image: "/me/cover.png",
+    image: "/me/coverv2.png",
     type: "website",
   };
 
