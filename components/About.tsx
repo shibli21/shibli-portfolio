@@ -14,7 +14,6 @@ const About = () => {
         </div>
         <SocialContacts />
       </div>
-
       <Resume />
     </div>
   );

@@ -22,10 +22,11 @@ export const NavBar = () => {
         <ul className="gap-6 lg:gap-10 hidden md:flex">
           {NAV_LINKS.map((link) => (
             <Link
-              className="text-lg font-medium transition duration-100 hover:text-orange-500 "
+              className="text-lg font-medium transition duration-100 hover:text-orange-500"
               href={link.href}
               key={link.name}
-              passHref
+              download={link.download}
+              target={link.download ? "_blank" : undefined}
             >
               {link.name}
             </Link>
@@ -49,11 +50,12 @@ export const NavBar = () => {
           <div className="flex-1 flex flex-col gap-2">
             {NAV_LINKS.map((link) => (
               <Link
+                className="text-lg font-medium transition duration-100 hover:text-orange-500 "
                 onClick={() => setOpenNav(false)}
                 href={link.href}
                 key={link.name}
-                passHref
-                className="text-lg font-medium transition duration-100 hover:text-orange-500 "
+                download={link.download}
+                target={link.download ? "_blank" : undefined}
               >
                 {link.name}
               </Link>
@@ -84,7 +86,8 @@ export const NAV_LINKS = [
 
   {
     name: "// resume",
-    href: "/#resume",
+    href: "/pdf/Syed_Shibli_Mahmud_Resume.pdf",
+    download: true,
   },
   {
     name: "// contact",

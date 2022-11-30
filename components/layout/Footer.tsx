@@ -9,7 +9,13 @@ export const Footer = () => {
         <h1>Syed Shibli Mahmud</h1>
         <div className="space-x-6 flex flex-wrap items-center justify-center">
           {NAV_LINKS.map((link) => (
-            <Link key={link.name} href={link.href} passHref className="transition  hover:text-orange-500 ">
+            <Link
+              key={link.name}
+              href={link.href}
+              download={link.download}
+              target={link.download ? "_blank" : undefined}
+              className="transition  hover:text-orange-500 "
+            >
               {link.name}
             </Link>
           ))}
