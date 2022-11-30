@@ -16,42 +16,14 @@ export const NavBar = () => {
 
   return (
     <>
-      <nav className="flex sticky top-0 backdrop-blur-xl z-50 p-4 items-center justify-between text-lg lowercase">
-        <Logo />
+      <div className="backdrop-blur-xl sticky top-0 z-50">
+        <nav className="flex    p-4 items-center justify-between text-lg lowercase container max-w-6xl mx-auto">
+          <Logo />
 
-        <div className="gap-6 lg:gap-10 hidden md:flex">
-          {NAV_LINKS.map((link) => (
-            <Link
-              className="text-lg font-medium transition duration-100 hover:text-orange-500"
-              href={link.href}
-              key={link.name}
-              download={link.download}
-              target={link.download ? "_blank" : undefined}
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
-
-        <div className="hidden md:block">
-          <DarkModeSwitch />
-        </div>
-        <button onClick={() => setOpenNav(!openNav)} className="focus:outline-none md:hidden ">
-          <Menu2 strokeWidth={2} size={30} />
-        </button>
-      </nav>
-
-      <SideNav isOpen={openNav} setOpenNav={() => setOpenNav(!openNav)}>
-        <div className="flex h-full flex-col  space-y-6 px-4">
-          <div className="mt-4 flex justify-between items-center">
-            <Logo />
-            <DarkModeSwitch />
-          </div>
-          <div className="flex-1 flex flex-col gap-2">
+          <div className="gap-6 lg:gap-10 hidden md:flex">
             {NAV_LINKS.map((link) => (
               <Link
-                className="text-lg font-medium transition duration-100 hover:text-orange-500 "
-                onClick={() => setOpenNav(false)}
+                className="text-lg font-medium transition duration-100 hover:text-rose-500"
                 href={link.href}
                 key={link.name}
                 download={link.download}
@@ -61,8 +33,37 @@ export const NavBar = () => {
               </Link>
             ))}
           </div>
-          <div className="py-4">
-            <SocialContacts isSmall />
+
+          <div className="hidden md:block">
+            <DarkModeSwitch />
+          </div>
+          <button onClick={() => setOpenNav(!openNav)} className="focus:outline-none md:hidden ">
+            <Menu2 strokeWidth={2} size={30} />
+          </button>
+        </nav>
+      </div>
+      <SideNav isOpen={openNav} setOpenNav={() => setOpenNav(!openNav)}>
+        <div className="flex h-full flex-col  space-y-6 px-4">
+          <div className="mt-4 flex justify-between items-center">
+            <Logo />
+            <DarkModeSwitch />
+          </div>
+          <div className="flex-1 flex flex-col gap-2">
+            {NAV_LINKS.map((link) => (
+              <Link
+                className="text-lg font-medium transition duration-100 hover:text-rose-500 "
+                onClick={() => setOpenNav(false)}
+                href={link.href}
+                key={link.name}
+                download={link.download}
+                target={link.download ? "_blank" : undefined}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <div className="py-4 flex border-t mt-4 justify-center">
+              <SocialContacts isSmall />
+            </div>
           </div>
         </div>
       </SideNav>

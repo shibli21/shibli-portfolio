@@ -34,9 +34,9 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
         <meta name="twitter:image" content={meta.image} />
       </Head>
 
-      <div className="container max-w-6xl mx-auto min-h-screen flex flex-col">
+      <div className=" min-h-screen flex flex-col">
         <NavBar />
-        <main className="flex-1 px-4">{children}</main>
+        <main className="container max-w-6xl mx-auto flex-1 px-4">{children}</main>
         <Footer />
       </div>
     </>

@@ -48,12 +48,12 @@ interface ExpertiseCard {
 
 const ExpertiseCard: FC<ExpertiseCard> = ({ title, subtitle, description, icon }) => {
   return (
-    <div className="border-2 border-gray-500 p-4 md:p-10">
+    <div className="border-2 border-zinc-500 p-4 md:p-10">
       <div className="flex items-center mb-4">
         {icon}
 
         <h1 className="text-xl md:text-2xl font-bold font-secondary z-0 ml-4 leading-5 md:leading-7">
-          <span className="tracking-wide relative before:absolute  before:right-0 before:bottom-1.5 before:w-full before:h-[8px] before:-skew-x-12  before:bg-orange-300 dark:before:bg-orange-600 before:-z-10">
+          <span className="tracking-wide relative before:absolute  before:right-0 before:bottom-1.5 before:w-full before:h-[8px] before:-skew-x-12  before:bg-rose-300 dark:before:bg-rose-500 before:-z-10">
             {title}
           </span>
           <br />

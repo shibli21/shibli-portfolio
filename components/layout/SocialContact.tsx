@@ -12,19 +12,19 @@ export const SocialContacts = ({ isSmall }: Props) => {
   return (
     <div className="space-x-2 flex items-center">
       <Link target="_blank" href="https://github.com/shibli21" aria-label="Github">
-        <BrandGithub size={size} className="hover:text-orange-500 transition" />
+        <BrandGithub size={size} className="hover:text-rose-500 transition" />
       </Link>
       <Link target="_blank" href="https://twitter.com/shibli21" aria-label="Twitter">
-        <BrandTwitter size={size} className="hover:text-orange-500 transition" />
+        <BrandTwitter size={size} className="hover:text-rose-500 transition" />
       </Link>
       <Link target="_blank" href="https://www.instagram.com/__shelbyy____/" aria-label="Instagram">
-        <BrandInstagram size={size} className="hover:text-orange-500 transition" />
+        <BrandInstagram size={size} className="hover:text-rose-500 transition" />
       </Link>
       <Link target="_blank" href="https://www.linkedin.com/in/shibli21/" aria-label="Linkedin">
-        <BrandLinkedin size={size} className="hover:text-orange-500 transition" />
+        <BrandLinkedin size={size} className="hover:text-rose-500 transition" />
       </Link>
       <Link target="_blank" href="https://www.facebook.com/shibli21" aria-label="Facebook">
-        <BrandFacebook size={size} className="hover:text-orange-500 transition" />
+        <BrandFacebook size={size} className="hover:text-rose-500 transition" />
       </Link>
     </div>
   );

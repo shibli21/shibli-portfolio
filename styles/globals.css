@@ -15,5 +15,5 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-  @apply shadow-orange-600 bg-orange-600 dark:bg-orange-600;
+  @apply shadow-rose-500 bg-rose-500 dark:bg-rose-500;
 }

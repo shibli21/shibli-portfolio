@@ -14,7 +14,7 @@ export const Footer = () => {
               href={link.href}
               download={link.download}
               target={link.download ? "_blank" : undefined}
-              className="transition  hover:text-orange-500 "
+              className="transition  hover:text-rose-500 "
             >
               {link.name}
             </Link>

@@ -48,7 +48,7 @@ const getProject = () => {
 
 const ProjectCard = ({ project }: { project: ProjectsType }) => {
   return (
-    <div className="dark:bg-zinc-800   border shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px]">
+    <div className="dark:bg-zinc-800  border border-zinc-500 shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px] ">
       <div className="overflow-hidden">
         <Image
           src={project.image}
@@ -62,12 +62,12 @@ const ProjectCard = ({ project }: { project: ProjectsType }) => {
         <div className="flex items-center justify-between">
           {project.external ? (
             <Link href={project.external} target="_blank">
-              <h3 className="text-xl font-secondary font-bold  hover:text-orange-600 cursor-pointer transition">
+              <h3 className="text-xl font-secondary font-bold  hover:text-rose-500 cursor-pointer transition">
                 {project.title}
               </h3>
             </Link>
           ) : (
-            <h3 className="text-xl font-secondary font-bold  hover:text-orange-600 cursor-pointer transition">
+            <h3 className="text-xl font-secondary font-bold  hover:text-rose-500 cursor-pointer transition">
               {project.title}
             </h3>
           )}
@@ -75,12 +75,12 @@ const ProjectCard = ({ project }: { project: ProjectsType }) => {
           <div className="flex gap-2">
             {project.github && (
               <Link href={project.github} target="_blank">
-                <BrandGithub size="20px" className="hover:text-orange-600 transition" />
+                <BrandGithub size="20px" className="hover:text-rose-500 transition" />
               </Link>
             )}
             {project.external && (
               <Link href={project.external} target="_blank">
-                <ExternalLink size="20px" className="hover:text-orange-600 transition" />
+                <ExternalLink size="20px" className="hover:text-rose-500 transition" />
               </Link>
             )}
           </div>
