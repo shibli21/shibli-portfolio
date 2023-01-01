@@ -49,6 +49,14 @@ function Resume() {
           <div>
             <h1 className="font-secondary text-3xl md:text-4xl  my-6">Professional Experience</h1>
             <ResumeItem>
+              <ResumeTitle>Associate Software Engineer</ResumeTitle>
+              <h1>
+                <em>Orbitax Bangladesh Limited</em>
+              </h1>
+              <Tag>Jan 2023 - Present</Tag>
+
+            </ResumeItem>
+            <ResumeItem>
               <ResumeTitle>Full-Stack Web Developer</ResumeTitle>
               <h1>
                 <em>Fiverr.com</em>
