@@ -45,4 +45,5 @@ const Projects = defineDocumentType(() => ({
 export default makeSource({
   documentTypes: [Projects],
   contentDirPath: "data",
+  disableImportAliasWarning: true,
 });
