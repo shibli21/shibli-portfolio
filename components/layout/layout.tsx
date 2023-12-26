@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { FC, PropsWithChildren } from "react";
 import { Footer } from "./Footer";
 import { NavBar } from "./NavBar";
+import Particles from "../particles";
 
 export const Layout: FC<PropsWithChildren> = ({ children }) => {
   const router = useRouter();
@@ -33,6 +34,8 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
       </Head>
+
+      <Particles className="fixed top-0 h-screen w-screen -z-10 animate-fade-in" quantity={100} />
 
       <div className=" min-h-screen flex flex-col">
         <NavBar />

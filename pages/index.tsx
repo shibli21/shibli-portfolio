@@ -1,7 +1,8 @@
-import About from "../components/About";
-import Contact from "../components/Contact";
-import MyExpertise from "../components/MyExpertise";
-import Work from "../components/Work";
+import Particles from "@/components/particles";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import MyExpertise from "@/components/MyExpertise";
+import Work from "@/components/Work";
 
 export default function Home() {
   return (

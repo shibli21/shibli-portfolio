@@ -26,7 +26,7 @@ export const Footer = () => {
         <div className="container max-w-6xl mx-auto py-4 flex flex-col gap-2 md:flex-row items-center justify-between">
           <p className="text-center">
             <span className="text-2xl mr-1">©</span>
-            2022 Shibli. All rights reserved
+            {new Date().getFullYear()} Shibli. All rights reserved
           </p>
           <SocialContacts isSmall />
         </div>
