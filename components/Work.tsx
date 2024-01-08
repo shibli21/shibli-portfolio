@@ -1,12 +1,11 @@
-import React from "react";
-import Heading from "./Heading";
 import { pick } from "contentlayer/client";
-import { allProjects, Projects as ProjectsType } from "../.contentlayer/generated";
 import Image from "next/image";
 import Link from "next/link";
 import { BrandGithub, ExternalLink } from "tabler-icons-react";
+import { allProjects, Projects as ProjectsType } from "../.contentlayer/generated";
+import { Card } from "./card";
+import Heading from "./Heading";
 import Tag from "./Tag";
-import { getAllPostsMeta } from "@/utils/mdx";
 
 const Work = () => {
   const projects = getProject();
@@ -15,12 +14,31 @@ const Work = () => {
     <div id="work">
       <Heading>My Works</Heading>
 
-      <div className="grid grid-cols-1 md:grid-cols-3  grid-flow-dense gap-6 my-10 md:my-20 ">
-        {projects.projects
-          .sort((a, b) => a.order - b.order)
-          .map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
+      <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3  my-10 md:my-20">
+        <div className="grid grid-cols-1 gap-4">
+          {projects.projects
+            .sort((a, b) => a.order - b.order)
+            .filter((_, i) => i % 3 === 0)
+            .map((project) => (
+              <ProjectCardV2 key={project.title} project={project} />
+            ))}
+        </div>
+        <div className="grid grid-cols-1 gap-4">
+          {projects.projects
+            .sort((a, b) => a.order - b.order)
+            .filter((_, i) => i % 3 === 1)
+            .map((project) => (
+              <ProjectCardV2 key={project.title} project={project} />
+            ))}
+        </div>
+        <div className="grid grid-cols-1 gap-4">
+          {projects.projects
+            .sort((a, b) => a.order - b.order)
+            .filter((_, i) => i % 3 === 2)
+            .map((project) => (
+              <ProjectCardV2 key={project.title} project={project} />
+            ))}
+        </div>
       </div>
     </div>
   );
@@ -45,6 +63,50 @@ const getProject = () => {
   );
 
   return { projects: JSON.parse(JSON.stringify(projects)) as ProjectsType[] };
+};
+
+const ProjectCardV2 = ({ project }: { project: ProjectsType }) => {
+  return (
+    <Card>
+      <article className="relative w-full h-full p-4 md:p-6">
+        <div className="flex items-center justify-between gap-2">
+          <div className="text-xs text-zinc-100">
+            <time dateTime={new Date(project.publishedAt).toISOString()}>
+              {Intl.DateTimeFormat(undefined, {
+                dateStyle: "medium",
+              }).format(new Date(project.publishedAt))}
+            </time>
+          </div>
+          <span className="flex items-center gap-1 text-xs text-zinc-500">
+            <div className="flex gap-2">
+              {project.github && (
+                <Link href={project.github} target="_blank">
+                  <BrandGithub size="20px" className="hover:text-rose-500 transition" />
+                </Link>
+              )}
+              {project.external && (
+                <Link href={project.external} target="_blank">
+                  <ExternalLink size="20px" className="hover:text-rose-500 transition" />
+                </Link>
+              )}
+            </div>
+          </span>
+        </div>
+
+        <h2 id="featured-post" className="mt-4 text-2xl font-bold text-zinc-100 group-hover:text-white ">
+          {project.title}
+        </h2>
+
+        
+        <p className="mt-4 text-sm  duration-150 text-zinc-400 group-hover:text-zinc-300">{project.description}</p>
+        <div className="space-x-2 mt-2">
+          {project.tech?.map((tech) => (
+            <Tag key={tech}>{tech}</Tag>
+          ))}
+        </div>
+      </article>
+    </Card>
+  );
 };
 
 const ProjectCard = ({ project }: { project: ProjectsType }) => {

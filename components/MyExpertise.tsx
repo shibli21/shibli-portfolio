@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { BrandReact, CSharp, DeviceDesktop, DeviceMobile } from "tabler-icons-react";
 import Heading from "./Heading";
+import { Card } from "./card";
 
 function MyExpertise() {
   return (
@@ -48,19 +49,21 @@ interface ExpertiseCard {
 
 const ExpertiseCard: FC<ExpertiseCard> = ({ title, subtitle, description, icon }) => {
   return (
-    <div className="border-2 border-zinc-500 p-4 md:p-10">
-      <div className="flex items-center mb-4">
-        {icon}
+    <Card>
+      <div className=" p-4 md:p-10">
+        <div className="flex items-center mb-4">
+          {icon}
 
-        <h1 className="text-xl md:text-2xl font-bold font-mono z-0 ml-4 leading-5 md:leading-7">
-          <span className="tracking-wide relative before:absolute  before:right-0 before:bottom-1.5 before:w-full before:h-[8px] before:-skew-x-12  before:bg-rose-300 dark:before:bg-rose-500 before:-z-10">
-            {title}
-          </span>
-          <br />
-          {subtitle}
-        </h1>
+          <h1 className="text-xl md:text-2xl font-black font-mono z-0 ml-4 leading-5 md:leading-7">
+            <span className="tracking-wide relative before:absolute  before:right-0 before:bottom-1.5 before:w-full before:h-[8px] before:-skew-x-12  before:bg-rose-300 dark:before:bg-rose-500 before:-z-10">
+              {title}
+            </span>
+            <br />
+            {subtitle}
+          </h1>
+        </div>
+        <p className="text-sm md:text-base">{description}</p>
       </div>
-      <p className="text-sm md:text-base">{description}</p>
-    </div>
+    </Card>
   );
 };
