@@ -70,7 +70,7 @@ const ProjectCardV2 = ({ project }: { project: ProjectsType }) => {
     <Card>
       <article className="relative w-full h-full p-4 md:p-6">
         <div className="flex items-center justify-between gap-2">
-          <div className="text-xs text-zinc-100">
+          <div className="text-xs text-zinc-900 dark:text-zinc-100 ">
             <time dateTime={new Date(project.publishedAt).toISOString()}>
               {Intl.DateTimeFormat(undefined, {
                 dateStyle: "medium",
@@ -93,12 +93,12 @@ const ProjectCardV2 = ({ project }: { project: ProjectsType }) => {
           </span>
         </div>
 
-        <h2 id="featured-post" className="mt-4 text-2xl font-bold text-zinc-100 group-hover:text-white ">
+        <h2 id="featured-post" className="mt-4 text-2xl font-bold dark:text-zinc-100 dark:group-hover:text-white ">
           {project.title}
         </h2>
 
         
-        <p className="mt-4 text-sm  duration-150 text-zinc-400 group-hover:text-zinc-300">{project.description}</p>
+        <p className="mt-4 text-sm  duration-150 dark:text-zinc-400  dark:group-hover:text-zinc-300">{project.description}</p>
         <div className="space-x-2 mt-2">
           {project.tech?.map((tech) => (
             <Tag key={tech}>{tech}</Tag>
