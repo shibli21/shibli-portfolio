@@ -7,6 +7,7 @@ import "./globals.css";
 import Providers from "./providers";
 
 export const metadata: Metadata = {
+  icons: '/logos/logo.svg',
   metadataBase: new URL("http://localhost:3000"),
   title: "Syed Shibli Mahmud – SOFTWARE ENGINEER, FULL STACK & APP DEVELOPER",
   description: `Full-stack developer, JavaScript & C# enthusiast`,
