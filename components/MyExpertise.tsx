@@ -52,7 +52,7 @@ const ExpertiseCard: FC<ExpertiseCard> = ({ title, subtitle, description, icon }
       <div className="flex items-center mb-4">
         {icon}
 
-        <h1 className="text-xl md:text-2xl font-bold font-secondary z-0 ml-4 leading-5 md:leading-7">
+        <h1 className="text-xl md:text-2xl font-bold font-mono z-0 ml-4 leading-5 md:leading-7">
           <span className="tracking-wide relative before:absolute  before:right-0 before:bottom-1.5 before:w-full before:h-[8px] before:-skew-x-12  before:bg-rose-300 dark:before:bg-rose-500 before:-z-10">
             {title}
           </span>

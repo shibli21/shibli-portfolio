@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { NAV_LINKS } from "./NavBar";
 import { SocialContacts } from "./SocialContact";
+import { NAV_LINKS } from "@/utils/nav-links";
 
 export const Footer = () => {
   return (

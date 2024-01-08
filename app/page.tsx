@@ -1,4 +1,3 @@
-import Particles from "@/components/particles";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import MyExpertise from "@/components/MyExpertise";

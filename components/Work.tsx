@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BrandGithub, ExternalLink } from "tabler-icons-react";
 import Tag from "./Tag";
+import { getAllPostsMeta } from "@/utils/mdx";
 
 const Work = () => {
   const projects = getProject();
@@ -62,12 +63,12 @@ const ProjectCard = ({ project }: { project: ProjectsType }) => {
         <div className="flex items-center justify-between">
           {project.external ? (
             <Link href={project.external} target="_blank">
-              <h3 className="text-xl font-secondary font-bold  hover:text-rose-500 cursor-pointer transition">
+              <h3 className="text-xl font-mono font-bold  hover:text-rose-500 cursor-pointer transition">
                 {project.title}
               </h3>
             </Link>
           ) : (
-            <h3 className="text-xl font-secondary font-bold  hover:text-rose-500 cursor-pointer transition">
+            <h3 className="text-xl font-mono font-bold  hover:text-rose-500 cursor-pointer transition">
               {project.title}
             </h3>
           )}

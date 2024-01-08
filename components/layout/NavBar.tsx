@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu2 } from "tabler-icons-react";
@@ -6,6 +8,7 @@ import Logo from "../Logo";
 import SideNav from "./SideNav";
 import { SocialContacts } from "./SocialContact";
 import { DarkModeSwitch } from "../DarkModeSwitch";
+import { NAV_LINKS } from "@/utils/nav-links";
 
 export const NavBar = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -16,14 +19,14 @@ export const NavBar = () => {
 
   return (
     <>
-      <div className="backdrop-blur-xl sticky top-0 z-50">
+      <div className="backdrop-blur-xl sticky top-0 z-50 ">
         <nav className="flex    p-4 items-center justify-between text-lg lowercase container max-w-6xl mx-auto">
           <Logo />
 
           <div className="gap-6 lg:gap-10 hidden md:flex">
             {NAV_LINKS.map((link) => (
               <Link
-                className="text-lg font-medium transition duration-100 hover:text-rose-500"
+                className="text-lg font-mono font-medium transition duration-100 hover:text-rose-500"
                 href={link.href}
                 key={link.name}
                 download={link.download}
@@ -51,7 +54,7 @@ export const NavBar = () => {
           <div className="flex-1 flex flex-col gap-2">
             {NAV_LINKS.map((link) => (
               <Link
-                className="text-lg font-medium transition duration-100 hover:text-rose-500 "
+                className="text-lg font-medium font-mono transition duration-100 hover:text-rose-500 "
                 onClick={() => setOpenNav(false)}
                 href={link.href}
                 key={link.name}
@@ -70,28 +73,3 @@ export const NavBar = () => {
     </>
   );
 };
-
-export const NAV_LINKS = [
-  {
-    name: "// about",
-    href: "/#about",
-  },
-  {
-    name: "// expertise",
-    href: "/#expertise",
-  },
-  {
-    name: "// work",
-    href: "/#work",
-  },
-
-  {
-    name: "// resume",
-    href: "/pdf/Syed_Shibli_Mahmud_Resume.pdf",
-    download: true,
-  },
-  {
-    name: "// contact",
-    href: "/#contact",
-  },
-];

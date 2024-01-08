@@ -14,7 +14,7 @@ const ResumeItem = ({ children }: ResumeItemProps) => {
 };
 
 const ResumeTitle: FC<PropsWithChildren> = ({ children }) => {
-  return <h1 className="text-xl md:text-2xl font-secondary">{children}</h1>;
+  return <h1 className="text-xl md:text-2xl font-mono">{children}</h1>;
 };
 
 function Resume() {
@@ -23,7 +23,7 @@ function Resume() {
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-4">
           <div>
-            <h1 className="font-secondary text-3xl md:text-4xl  my-6">Education</h1>
+            <h1 className="font-mono font-bold text-3xl md:text-4xl  my-6">Education</h1>
             <ResumeItem>
               <ResumeTitle>Sylhet Engineering College</ResumeTitle>
               <h1>
@@ -47,14 +47,13 @@ function Resume() {
             </ResumeItem>
           </div>
           <div>
-            <h1 className="font-secondary text-3xl md:text-4xl  my-6">Professional Experience</h1>
+            <h1 className="font-mono text-3xl md:text-4xl  font-bold my-6">Professional Experience</h1>
             <ResumeItem>
               <ResumeTitle>Associate Software Engineer</ResumeTitle>
               <h1>
                 <em>Orbitax Bangladesh Limited</em>
               </h1>
               <Tag>Jan 2023 - Present</Tag>
-
             </ResumeItem>
             <ResumeItem>
               <ResumeTitle>Full-Stack Web Developer</ResumeTitle>
