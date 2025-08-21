@@ -29,7 +29,7 @@ function Resume() {
               <h1>
                 <em>B.Sc in Computer Science & Engineering</em>
               </h1>
-              <Tag>Jan 2018 - Dec 2022</Tag>
+              <Tag>Jan 2018 - Nov 2022</Tag>
             </ResumeItem>
             <ResumeItem>
               <ResumeTitle>Cumilla Victoria govt. College</ResumeTitle>
@@ -49,21 +49,37 @@ function Resume() {
           <div>
             <h1 className="font-mono text-3xl md:text-4xl  font-bold my-6">Professional Experience</h1>
             <ResumeItem>
+              <ResumeTitle>Software Engineer</ResumeTitle>
+              <h1>
+                <em>Orbitax Bangladesh Limited</em>
+              </h1>
+              <Tag>July 2024 - Present</Tag>
+              <ul className="mt-4 space-y-2 list-disc list-inside">
+                <li>
+                   Developed a dynamic drag-and-drop form builder with complex grid layout and validation logic
+                  (Angular | TypeScript)
+                </li>
+                <li>
+                   Implemented end-to-end PDF generation functionality for user-generated forms, including dynamic
+                  layout rendering and multi-language support (.NET)
+                </li>
+              </ul>
+            </ResumeItem>
+            <ResumeItem>
               <ResumeTitle>Associate Software Engineer</ResumeTitle>
               <h1>
                 <em>Orbitax Bangladesh Limited</em>
               </h1>
-              <Tag>Jan 2023 - Present</Tag>
-            </ResumeItem>
-            <ResumeItem>
-              <ResumeTitle>Full-Stack Web Developer</ResumeTitle>
-              <h1>
-                <em>Fiverr.com</em>
-              </h1>
-              <ul>
-                <li>- Completed over 20 projects on Fiverr.com</li>
-                <li>- Level one seller in the Fiverr.com platform</li>
-                <li>- 100% customer satisfaction rate</li>
+              <Tag>Jan 2023 - Jun 2024</Tag>
+              <ul className="mt-4 space-y-2 list-disc list-inside">
+                <li>
+                   Developed a pagination system for large datasets in the spreadsheet module, enabling efficient data
+                  handling (.Net | Angular)
+                </li>
+                <li>
+                   Optimised the platform's spreadsheet module, resulting in a 16x performance improvement in load
+                  times (Angular | JavaScript)
+                </li>
               </ul>
             </ResumeItem>
           </div>

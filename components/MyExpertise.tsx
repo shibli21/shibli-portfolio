@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { BrandReact, CSharp, DeviceDesktop, DeviceMobile } from "tabler-icons-react";
+import { BrandReact, CSharp, DeviceDesktop, Database } from "tabler-icons-react";
 import Heading from "./Heading";
 import { Card } from "./card";
 
@@ -11,27 +11,27 @@ function MyExpertise() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-10 md:mt-20">
         <ExpertiseCard
           title="Frontend Dev"
-          subtitle=" React, NextJS"
+          subtitle=" React, Angular, TypeScript"
           icon={<BrandReact size={48} />}
-          description="UI/UX enthusiast. Expert in HTML, CSS, JS, React and NextJS frameworks with over 3 years of experience."
+          description="UI/UX enthusiast. Expert in HTML, CSS, JS, React, Angular, and NextJS frameworks with focus on TypeScript development."
         />
         <ExpertiseCard
           title="Backend Dev"
-          subtitle=".Net Core, NodeJS"
+          subtitle=".NET Core, C#"
           icon={<CSharp size={48} />}
-          description="Experienced in building RESTful APIs using .Net Core and NodeJS. Have experience in building microservices."
+          description="Experienced in building RESTful APIs and microservices using .NET Core and C#. Proficient in database design and cloud integration."
         />
         <ExpertiseCard
-          title="Software"
-          subtitle="Development"
+          title="Cloud & DevOps"
+          subtitle="AWS, Microservices"
           icon={<DeviceDesktop size={48} />}
-          description="Strong knowledge of functional and object oriented programming: Dart, C# JavaScript, TypeScript. Experienced in microservices architecture."
+          description="Strong knowledge of cloud architecture and DevOps practices. Experienced in AWS integration, CI/CD pipelines, and microservices architecture."
         />
         <ExpertiseCard
-          title="Android, iOS Dev"
-          subtitle="Flutter, React Native"
-          icon={<DeviceMobile size={48} />}
-          description="Have experience developing cross-platform and hybrid mobile apps using Flutter/ React Native."
+          title="Database & Messaging"
+          subtitle="MongoDB, RabbitMQ"
+          icon={<Database size={48} />}
+          description="Experienced in database design and optimization with MongoDB. Proficient in message queuing systems like RabbitMQ for distributed applications."
         />
       </div>
     </div>

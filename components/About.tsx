@@ -11,7 +11,7 @@ const About = () => {
             Syed Shibli Mahmud
           </h1>
           <h1 className=" tracking-widest uppercase text-lg md:text-xl mt-2">
-            SOFTWARE ENGINEER, FULL STACK & APP DEVELOPER
+            SOFTWARE ENGINEER • FULL STACK DEVELOPER
           </h1>
         </div>
         <SocialContacts />
